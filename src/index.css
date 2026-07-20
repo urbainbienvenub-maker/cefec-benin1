@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-body bg-white text-slate-800 antialiased transition-colors duration-300;
+  }
+
+  html.dark body {
+    @apply bg-surface-dark text-slate-100;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display text-primary-dark;
+  }
+
+  html.dark h1, html.dark h2, html.dark h3, html.dark h4 {
+    @apply text-white;
+  }
+
+  /* Focus visible pour l'accessibilité clavier */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    outline: 2px solid #27A9E1;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background-color: #FDB913;
+    color: #0A3D91;
+  }
+}
+
+@layer components {
+  /* Ligne signature thermique — du bleu froid vers l'orange/jaune chaud.
+     Symbolise l'activité de CEFEC : du froid maîtrisé à l'énergie solaire. */
+  .thermal-line {
+    @apply h-1.5 rounded-full bg-thermal-gradient;
+  }
+
+  .eyebrow {
+    @apply font-mono text-xs tracking-[0.2em] uppercase text-primary-light font-medium;
+  }
+
+  .container-cefec {
+    @apply max-w-7xl mx-auto px-6 sm:px-8 lg:px-10;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-primary text-white px-7 py-3.5 font-semibold text-sm tracking-wide shadow-soft transition-all duration-300 hover:bg-primary-dark hover:shadow-card-hover hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-primary text-primary px-7 py-3 font-semibold text-sm tracking-wide transition-all duration-300 hover:bg-primary hover:text-white hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  html.dark .btn-secondary {
+    @apply border-primary-light text-primary-light hover:bg-primary-light hover:text-primary-dark;
+  }
+
+  .btn-accent {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-orange text-white px-7 py-3.5 font-semibold text-sm tracking-wide shadow-soft transition-all duration-300 hover:brightness-110 hover:shadow-card-hover hover:-translate-y-0.5;
+  }
+
+  .card-surface {
+    @apply bg-white dark:bg-slate-900/60 rounded-xl2 shadow-card border border-slate-100 dark:border-slate-800 transition-all duration-300;
+  }
+}
+
+/* Scrollbar discrète */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #27A9E1;
+  border-radius: 999px;
+}
