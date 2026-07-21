@@ -8,11 +8,8 @@ export default function Footer() {
 
   return (
     <footer className="bg-primary-dark text-white relative overflow-hidden">
-      {/* Ligne thermique en tête de footer — signature visuelle du site */}
       <div className="thermal-line rounded-none h-1.5 w-full" />
-
       <div className="container-cefec py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-        {/* Colonne 1 : identité */}
         <div>
           <div className="flex items-center gap-3 mb-4">
             <img src={logo} alt="Logo CEFEC BENIN" className="w-12 h-12 object-contain bg-white rounded-full p-1" />
@@ -22,17 +19,11 @@ export default function Footer() {
             Centre d'Étude en Froid, Énergie et Climatisation. L'expertise au service de votre confort énergétique.
           </p>
           <div className="flex gap-3">
-            
-              href="https://www.facebook.com/share/1JkyfezNBr/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="CEFEC BENIN sur Facebook"
-              className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-orange transition-colors duration-300"
-            >
+            <a href="https://www.facebook.com/share/1JkyfezNBr/" target="_blank" rel="noopener noreferrer" aria-label="CEFEC BENIN sur Facebook" className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-orange transition-colors duration-300">
               <Facebook size={16} />
             </a>
           </div>
-        {/* Colonne 2 : services */}
+        </div>
         <div>
           <h4 className="font-semibold mb-4 text-sm uppercase tracking-wide text-solar">Nos Services</h4>
           <ul className="space-y-2.5 text-sm text-blue-100/80">
@@ -43,8 +34,6 @@ export default function Footer() {
             ))}
           </ul>
         </div>
-
-        {/* Colonne 3 : liens rapides */}
         <div>
           <h4 className="font-semibold mb-4 text-sm uppercase tracking-wide text-solar">Navigation</h4>
           <ul className="space-y-2.5 text-sm text-blue-100/80">
@@ -56,8 +45,6 @@ export default function Footer() {
             <li><Link to="/contact" className="hover:text-white transition-colors">Contact</Link></li>
           </ul>
         </div>
-
-        {/* Colonne 4 : contact */}
         <div>
           <h4 className="font-semibold mb-4 text-sm uppercase tracking-wide text-solar">Contact</h4>
           <ul className="space-y-3 text-sm text-blue-100/80">
@@ -76,7 +63,6 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-
       <div className="border-t border-white/10">
         <div className="container-cefec py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-blue-100/60">
           <p>© {year} CEFEC BENIN — Tous droits réservés.</p>
