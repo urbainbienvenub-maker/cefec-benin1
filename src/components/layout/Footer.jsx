@@ -2,9 +2,11 @@ import { Link } from 'react-router-dom'
 import { Facebook, Mail, MapPin, Phone } from 'lucide-react'
 import logo from '../../assets/logo.png'
 import { services } from '../../data/services.js'
+
 export default function Footer() {
   const year = new Date().getFullYear()
-    return (
+
+  return (
     <footer className="bg-primary-dark text-white relative overflow-hidden">
       {/* Ligne thermique en tête de footer — signature visuelle du site */}
       <div className="thermal-line rounded-none h-1.5 w-full" />
@@ -19,8 +21,9 @@ export default function Footer() {
           <p className="text-sm text-blue-100/80 leading-relaxed mb-5">
             Centre d'Étude en Froid, Énergie et Climatisation. L'expertise au service de votre confort énergétique.
           </p>
-          <div className="flex gap-3"></div>
-           href="https://www.facebook.com/share/1JkyfezNBr/"
+          <div className="flex gap-3">
+            
+              href="https://www.facebook.com/share/1JkyfezNBr/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="CEFEC BENIN sur Facebook"
@@ -29,8 +32,7 @@ export default function Footer() {
               <Facebook size={16} />
             </a>
           </div>
-        </div>
-          {/* Colonne 2 : services */}
+        {/* Colonne 2 : services */}
         <div>
           <h4 className="font-semibold mb-4 text-sm uppercase tracking-wide text-solar">Nos Services</h4>
           <ul className="space-y-2.5 text-sm text-blue-100/80">
@@ -54,7 +56,8 @@ export default function Footer() {
             <li><Link to="/contact" className="hover:text-white transition-colors">Contact</Link></li>
           </ul>
         </div>
-          {/* Colonne 4 : contact */}
+
+        {/* Colonne 4 : contact */}
         <div>
           <h4 className="font-semibold mb-4 text-sm uppercase tracking-wide text-solar">Contact</h4>
           <ul className="space-y-3 text-sm text-blue-100/80">
