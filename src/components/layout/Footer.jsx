@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone } from 'lucide-react'
+import { Facebook, Mail, MapPin, Phone } from 'lucide-react'
 import logo from '../../assets/logo.png'
 import { services } from '../../data/services.js'
 
@@ -22,16 +22,15 @@ export default function Footer() {
             Centre d'Étude en Froid, Énergie et Climatisation. L'expertise au service de votre confort énergétique.
           </p>
           <div className="flex gap-3">
-            {[Facebook, Instagram, Linkedin].map((Icon, i) => (
-              <a
-                key={i}
-                href="#"
-                aria-label="Réseau social CEFEC"
-                className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-orange transition-colors duration-300"
-              >
-                <Icon size={16} />
-              </a>
-            ))}
+            
+              href="https://www.facebook.com/share/1JkyfezNBr/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="CEFEC BENIN sur Facebook"
+              className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-orange transition-colors duration-300"
+            >
+              <Facebook size={16} />
+            </a>
           </div>
         </div>
 
@@ -66,15 +65,15 @@ export default function Footer() {
           <ul className="space-y-3 text-sm text-blue-100/80">
             <li className="flex items-start gap-2.5">
               <MapPin size={16} className="mt-0.5 shrink-0 text-primary-light" />
-              Cotonou, Bénin
+              Dagbedji Siké, 7ème Arrondissement, Cotonou
             </li>
             <li className="flex items-center gap-2.5">
               <Phone size={16} className="shrink-0 text-primary-light" />
-              +229 00 00 00 00
+              (+229) 01 96 31 37 13
             </li>
             <li className="flex items-center gap-2.5">
               <Mail size={16} className="shrink-0 text-primary-light" />
-              contact@cefec-benin.com
+              cefecbenin@outlook.fr
             </li>
           </ul>
         </div>

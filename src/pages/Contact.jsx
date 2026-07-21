@@ -7,9 +7,9 @@ import ContactForm from '../components/contact/ContactForm.jsx'
 import MapEmbed from '../components/contact/MapEmbed.jsx'
 
 const infos = [
-  { icon: Phone, label: 'Téléphone', value: '+229 00 00 00 00' },
-  { icon: Mail, label: 'E-mail', value: 'contact@cefec-benin.com' },
-  { icon: MapPin, label: 'Adresse', value: 'Cotonou, Bénin' },
+  { icon: Phone, label: 'Téléphone', value: '(+229) 01 96 31 37 13' },
+  { icon: Mail, label: 'E-mail', value: 'cefecbenin@outlook.fr' },
+  { icon: MapPin, label: 'Adresse', value: 'Dagbedji Siké, 7ème Arrondissement, Cotonou' },
   { icon: Clock, label: 'Horaires', value: 'Lun – Sam · 8h00 – 18h30' }
 ]
 
@@ -30,7 +30,6 @@ export default function Contact() {
 
       <section className="py-24">
         <div className="container-cefec grid lg:grid-cols-[1fr_1.3fr] gap-14">
-          {/* Infos + carte */}
           <Reveal direction="left">
             <div className="space-y-8">
               <div>
@@ -54,7 +53,6 @@ export default function Contact() {
             </div>
           </Reveal>
 
-          {/* Formulaire */}
           <Reveal direction="right" delay={0.1}>
             <div className="flex gap-3 mb-6">
               <button
