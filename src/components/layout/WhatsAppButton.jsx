@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 
 // Numéro WhatsApp à personnaliser dans /src/data — placeholder pour le moment
-const WHATSAPP_NUMBER = '22900000000'
+const WHATSAPP_NUMBER = '22941647644'
 const MESSAGE = encodeURIComponent("Bonjour CEFEC BENIN, je souhaite un renseignement sur vos services.")
 
 export default function WhatsAppButton() {
